@@ -76,4 +76,16 @@ Locale: ru
 вторник 15 января 2019 22:27:34
 ```
 
+## Opting Out Of Package Discovery
 
+If you would like to disable package discovery for a this package, and want to use your own Service Provider you may list the package name in the extra section of your application's composer.json file:
+
+```
+"extra": {
+    "laravel": {
+        "dont-discover": [
+            "epigra/laravel-localize"
+        ]
+    }
+},
+```
