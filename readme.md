@@ -1,15 +1,17 @@
-<li class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        Languages
-        <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-        @foreach($languages as $key=>$lang)
-        <li class="{{ active_class(session('locale') == $key) }}">
-            <a href="{{route('locale',$key)}}"> {{ $lang }}</a>
-        </li>
-        @endforeach
-    </ul>
-</li>
+## Laravel-Localize
 
-\Config::set('translatable.locales', config('marvin.languages')); //override translatable configuration
+This package requires `propaganistas/laravel-intl` and auto registers a web middleware that sets user locales on session properly.
+
+And also registers web routes as /locale/*key* for all available locales.
+
+You can set your available locales on your projects by adding a locales key and an array to your `config/app.php`
+
+```
+    'locale' => 'en',
+    'locales' => ['en','tr','es','de'],
+```
+
+And later on; if you visit any of the available locales from locale/en ; you'll it'll be saved to your session and all supported libraries (like jenssegers/date) will be responding as expected.
+
+
+You can get more detailed information about supported packages from https://github.com/Propaganistas/Laravel-Intl
