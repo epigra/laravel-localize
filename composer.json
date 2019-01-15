@@ -1,0 +1,29 @@
+{
+    "name": "epigra/laravel-localize",
+    "description": "Localize your laravel projects easily",
+    "authors": [
+        {
+            "name": "Uğur Aydoğdu",
+            "email": "ugur.aydogdu@epigra.com"
+        }
+    ],
+    "require": {
+        "laravel/framework": "^5.7",
+        "propaganistas/laravel-intl": "^2.1"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Epigra\\LaravelLocalize\\LocalizeServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Epigra\\LaravelLocalize\\": "src"
+        }
+    }
+}
