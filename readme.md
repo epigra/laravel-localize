@@ -78,7 +78,7 @@ Locale: ru
 
 ## Opting Out Of Package Discovery
 
-If you would like to disable package discovery for a this package, and want to use your own Service Provider you may list the package name in the extra section of your application's composer.json file:
+If you would like to disable auto-discovery for this package or want to use your customized Service Provider instead of package’s, you may add this package to the extra section in applications composer file:
 
 ```
 "extra": {
