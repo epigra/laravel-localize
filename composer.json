@@ -8,9 +8,9 @@
         }
     ],
     "require": {
-        "laravel/framework": "^5.8|^6.0",
+        "laravel/framework": "^7.0",
         "jenssegers/date": "^3.5",
-        "propaganistas/laravel-intl": "^3.0"
+        "epigra/laravel-int": "^7.0"
     },
     "extra": {
         "laravel": {
