@@ -4,7 +4,6 @@ namespace Epigra\LaravelLocalize;
 
 use Closure;
 use Carbon\Carbon;
-use Date;
 use Session;
 use App;
 
@@ -32,8 +31,6 @@ class LocaleMiddleware
 
         App::setLocale(session()->get('locale'));
         Carbon::setLocale(session()->get('locale'));
-        Date::setLocale(session()->get('locale'));
-
 
         foreach (config('app.locales') as $language) :
             $locales[$language] = language($language);

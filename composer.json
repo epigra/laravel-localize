@@ -9,7 +9,6 @@
     ],
     "require": {
         "laravel/framework": "^7.0",
-        "jenssegers/date": "^3.5",
         "epigra/laravel-int": "^7.0"
     },
     "extra": {
