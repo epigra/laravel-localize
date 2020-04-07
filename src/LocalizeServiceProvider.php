@@ -2,10 +2,9 @@
 
 namespace Epigra\LaravelLocalize;
 
-use Illuminate\Support\ServiceProvider;
-
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\ServiceProvider;
 
 class LocalizeServiceProvider extends ServiceProvider
 {
@@ -23,10 +22,9 @@ class LocalizeServiceProvider extends ServiceProvider
      */
     public function boot(Router $router)
     {
-        
         $router->pushMiddlewareToGroup('web', LocaleMiddleware::class);
-        
-        Route::middleware('web')->group(__DIR__ . '/routes.php');
+
+        Route::middleware('web')->group(__DIR__.'/routes.php');
     }
 
     /**

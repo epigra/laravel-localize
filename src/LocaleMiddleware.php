@@ -2,10 +2,10 @@
 
 namespace Epigra\LaravelLocalize;
 
-use Closure;
-use Carbon\Carbon;
-use Session;
 use App;
+use Carbon\Carbon;
+use Closure;
+use Session;
 
 class LocaleMiddleware
 {
@@ -15,6 +15,7 @@ class LocaleMiddleware
     {
         $this->languages = config('app.locales');
     }
+
     /**
      * Handle an incoming request.
      *
@@ -24,8 +25,7 @@ class LocaleMiddleware
      */
     public function handle($request, Closure $next)
     {
-
-        if (!Session::has('locale')) {
+        if (! Session::has('locale')) {
             Session::put('locale', $request->getPreferredLanguage($this->languages));
         }
 
@@ -37,6 +37,7 @@ class LocaleMiddleware
         endforeach;
 
         view()->share('locales', $locales);
+
         return $next($request);
     }
 }
