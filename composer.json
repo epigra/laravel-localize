@@ -1,6 +1,7 @@
 {
     "name": "epigra/laravel-localize",
     "description": "Localize your laravel projects easily",
+    "license": "proprietary",
     "authors": [
         {
             "name": "Uğur Aydoğdu",
@@ -11,19 +12,17 @@
         "laravel/framework": "^7.0",
         "epigra/laravel-int": "^7.0"
     },
+    "autoload": {
+        "psr-4": {
+            "Epigra\\LaravelLocalize\\": "src/"
+        }
+    },
     "extra": {
         "laravel": {
             "providers": [
                 "Epigra\\LaravelLocalize\\LocalizeServiceProvider"
             ],
-            "aliases": {
-                
-            }
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "Epigra\\LaravelLocalize\\": "src"
+            "aliases": []
         }
     }
 }
