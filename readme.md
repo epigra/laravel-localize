@@ -1,8 +1,8 @@
 ## Laravel-Localize
 
-This package requires `propaganistas/laravel-intl` and auto registers a web middleware that sets user locales on session properly.
+This package auto registers a web middleware that sets user locales on session properly.
 
-And also registers web routes as /locale/*key* for all available locales.
+And also registers web routes as `locale/{locale}` for all available locales to set app locale on session and redirect user back.
 
 You can set your available locales on your projects by adding a locales key and an array to your `config/app.php`
 
@@ -11,58 +11,10 @@ You can set your available locales on your projects by adding a locales key and 
     'locales' => ['en','tr','es','de'],
 ```
 
-And later on; if you visit any of the available locales from locale/en ; you'll it'll be saved to your session and all supported libraries (like jenssegers/date) will be responding as expected.
+If you visit any of the available locales from `locale/{locale}` it'll set the session variable and your app locale would be also initiated automatically.
 
+You can check https://github.com/epigra/laravel-int if you need country, currency and languages.
 
-You can get more detailed information about supported packages from https://github.com/Propaganistas/Laravel-Intl
-
-## Sample Output After Proper Installation
-
-```
-{{ country('US') }} <br>
-{{ currency('GBP') }} <br>
-{{ language('es') }} <br>
-```
-
-Locale: tr
-
-```
-Amerika Birleşik Devletleri 
-İngiliz Sterlini 
-İspanyolca 
-```
-
-Locale: en
-
-```
-United States 
-British Pound 
-Spanish 
-```
-
-Locale: es
-
-```
-Estados Unidos 
-libra esterlina 
-español 
-```
-
-Locale: de
-
-```
-Vereinigte Staaten 
-Britisches Pfund 
-Spanisch 
-```
-
-Locale: ru
-
-```
-Соединенные Штаты 
-британский фунт стерлингов 
-испанский 
-```
 
 ## Opting Out Of Package Discovery
 
