@@ -1,6 +1,6 @@
 {
     "name": "epigra/laravel-localize",
-    "description": "Localize your laravel projects easily",
+    "description": "Change your app locale and manage user sessions in your laravel projects easily",
     "authors": [
         {
             "name": "Uğur Aydoğdu",
@@ -8,8 +8,7 @@
         }
     ],
     "require": {
-        "laravel/framework": "^7.0",
-        "epigra/laravel-int": "^7.0"
+        "laravel/framework": "^7.0"
     },
     "extra": {
         "laravel": {
