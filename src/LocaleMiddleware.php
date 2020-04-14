@@ -32,11 +32,6 @@ class LocaleMiddleware
         App::setLocale(session()->get('locale'));
         Carbon::setLocale(session()->get('locale'));
 
-        foreach (config('app.locales') as $language) :
-            $locales[$language] = language($language);
-        endforeach;
-
-        view()->share('locales', $locales);
         return $next($request);
     }
 }
